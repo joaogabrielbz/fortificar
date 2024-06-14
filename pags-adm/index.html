@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../src/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../src/logo-fortificar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-adm.css">
+    <title>Fortificar - Administrador</title>
+</head>
+
+<body>
+    <script>
+        // codigo para não deixar usuários não autorizados entrarem
+        window.onload = function () {
+            var auth = sessionStorage.getItem('auth');
+            if (!auth || auth !== "adm") {
+                sessionStorage.setItem('tipoUsuario', "adm");
+                window.location.href = '../login.html';
+            }
+        }
+    </script>
+    <header>
+        <nav>
+            <a class="bt-normal ativado" href="#">Cadastros</a>
+            <a class="bt-normal" href="relatorios.html">Relatórios</a>
+            <a class="bt-normal" href="chat.html">Chats</a>
+        </nav>
+        <div>
+            <div id="bt-user">
+                <button><i class="fa-solid fa-user fa-3x"></i></button>
+                <div class="submenu">
+                    <h3>Administrador</h3>
+                    <a class="bt-bg-azul" onclick="sair()" href="../index.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+        <main id="aside-screen">
+            <aside>
+                <input class="bt-bg-azul" type="text" name="nome" id="txtNome" placeholder="Nome da empresa">
+                <ul>
+                    <li><i class="fa-regular fa-square fa-xl"></i>
+                        <p style="text-decoration: underline;">Instituição #1 - Pendente</p>
+                    </li>
+                    <li><i class="fa-regular fa-square-check fa-xl"></i>
+                        <p>Instituição #2</p>
+                    </li>
+                    <li><i class="fa-regular fa-square-check fa-xl"></i>
+                        <p>Instituição #3</p>
+                    </li>
+                    <li><i class="fa-regular fa-square-check fa-xl"></i>
+                        <p>Instituição #4</p>
+                    </li>
+                    <li><i class="fa-regular fa-square-check fa-xl"></i>
+                        <p>Instituição #5</p>
+                    </li>
+                    <li><i class="fa-regular fa-square-check fa-xl"></i>
+                        <p>Instituição #6</p>
+                    </li>
+                    <li><i class="fa-regular fa-square-check fa-xl"></i>
+                        <p>Instituição #7</p>
+                    </li>
+                </ul>
+            </aside>
+            <section class="conteudo">
+                <div class="row">
+                    <img height="170" src="../src/foto-empresa.png" alt="Logo Empresa">
+                    <div id="info-empresa">
+                        <div class="column">
+                            <h2>Instituição #1 - Pendente</h2>
+                            <h3>Doação de alimentos</h3>
+                        </div>
+                        <div>
+                            <p>“Somos uma empresa dedicada a doação de alimentos
+                                desde 2019, atendendo com orgulho mais de cem mil famílias através do repasse de doações
+                                voluntárias”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th>CNPJ</th>
+                        <td>12.345.678/0001-90</td>
+                    </tr>
+                    <tr>
+                        <th>Telefone</th>
+                        <td>+55 (27) 1234-5678</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>contato@alimentaesperanca.org.br</td>
+                    </tr>
+                    <tr>
+                        <th>Website</th>
+                        <td>www.alimentaesperanca.org.br</td>
+                    </tr>
+                    <tr>
+                        <th>Valores</th>
+                        <td>Solidariedade, Comunhão e Respeito</td>
+                    </tr>
+                    <tr>
+                        <th>Impacto</th>
+                        <td>1.300 toneladas de alimentos / 100.000 pessoas</td>
+                    </tr>
+                    <tr>
+                        <th>Descrição</th>
+                        <td>Contamos com uma equipe dedicada de 30 funcionários e mais de 200 voluntários que atuam
+                            diretamente na coleta, organização e distribuição de alimentos, Temos parcerias com grandes
+                            redes de supermercados, ONGs locais, prefeituras e diversas empresas do setor privado que
+                            compartilham nosso compromisso com a luta contra a fome.</td>
+                    </tr>
+                </table>
+                <div class="bts">
+                    <button class="bt-bg-verde" id="bt-rem"><i class="fa-solid fa-x"></i>Rejeitar</button>
+                    <button class="bt-bg-verde"><i class="fa-solid fa-check"></i>Aceitar</button>
+                </div>
+            </section>
+
+
+
+    </main>
+    <footer>
+        <div>
+            <img src="../src/logo-fortificar.png" alt="Logo Fortificar">
+        </div>
+        <div>
+            <a class="bt-bg-azul" target="_blank" href="https://www.instagram.com/fortesengenharialtda/"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a class="bt-bg-azul" style="padding: 0.7em 0.6em !important" target="_blank"
+                href="https://www.linkedin.com/company/fortes-engenharia-ltda/"><i
+                    class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a class="bt-bg-azul" target="_blank" href="https://fortes.ind.br/fale-conosco/"><i
+                    class="fa-solid fa-inbox fa-xl"></i></a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</html>

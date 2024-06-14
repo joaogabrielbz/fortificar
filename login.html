@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="src/logo-fortificar.png" type="image/x-icon">
+    <title>Fortificar</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var tipoUsuario = sessionStorage.getItem('tipoUsuario');
+            if (tipoUsuario) {
+                if (tipoUsuario === 'dona') {
+                    document.getElementById('lblTipoUsuario').innerHTML = "Instituição";                
+                }
+            }
+        }
+    </script>
+
+    <main id="login">
+        <aside id="form-aside"></aside>
+        <section>
+            <p id="lblTipoUsuario">administrador</p>
+            <form id="formLogin" onsubmit="return validarForm()">
+                <img src="src/logo-fortificar.png" alt="Logo Fortificar">
+                <input required class="input-bg-azul" type="text" name="nome" id="txtNome" placeholder="Usuário">
+                <input required class="input-bg-azul" type="password" name="senha" id="txtSenha" placeholder="Senha">
+                <div>
+                    <a class="bt-normal" href="#">Esqueceu sua senha?</a>
+                    <button type="submit" class="bt-bg-azul">Login</button>
+                </div>
+            </form>
+            <p id="lblRetorno"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <img src="src/logo-fortificar.png" alt="Logo Fortificar">
+        </div>
+        <div>
+            <a class="bt-bg-azul" target="_blank" href="https://www.instagram.com/fortesengenharialtda/"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a class="bt-bg-azul" style="padding: 0.7em 0.6em !important" target="_blank"
+                href="https://www.linkedin.com/company/fortes-engenharia-ltda/"><i
+                    class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a class="bt-bg-azul" target="_blank" href="https://fortes.ind.br/fale-conosco/"><i
+                    class="fa-solid fa-inbox fa-xl"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

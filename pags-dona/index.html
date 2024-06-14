@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../src/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../src/logo-fortificar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-donatario.css">
+    <title>Fortificar - Donatario</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var auth = sessionStorage.getItem('auth');
+            if (!auth || auth !== "dona") {
+                sessionStorage.setItem('tipoUsuario', "dona");
+                window.location.href = '../login.html';
+            }
+        }
+    </script>
+
+
+    <header>
+        <nav>
+            <a class="bt-normal ativado" href="#">Home</a>
+            <a class="bt-normal" href="prestacao_de_contas.html">Prestação de Contas</a>
+            <a class="bt-normal" href="solicitacoes.html">Solicitações</a>
+        </nav>
+        <div>
+            <div>
+                <button><i class="fa-solid fa-bell fa-3x"></i></button>
+            </div>
+            <div>
+                <button><i class="fa-solid fa-comment fa-3x"></i></button>
+            </div>
+            <div id="bt-user">
+                <button><i class="fa-solid fa-user fa-3x"></i></button>
+                <div class="submenu">
+                    <h3>Donatário</h3>
+                    <a class="bt-bg-azul" onclick="sair()" href="../index.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="home-section">
+            <div id="div-video">
+                <iframe src="https://www.youtube.com/embed/dMacdG2I5q0?si=LDQ-BQvSq8XairRv" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="div-texto">
+                <div>
+                    <h2>Projetos</h2>
+                    <p>A FORTES Engenharia LTDA é uma empresa de construção civil industrial consolidada e referência em
+                        seu
+                        ramo de atuação. É uma marca forte, que gera e agrega valor para as pessoas, para o mercado e
+                        para o
+                        Brasil. Atua com ética, competitividade e qualidade na construção de grandes empreendimentos, em
+                        diferentes tipos de obras e nos mais importantes setores da economia, sendo uma referência em
+                        inovação e em soluções tecnológicas diferenciadas.</p>
+                </div>
+                <a class="bt-bg-verde" href="">Ver editais</a>
+            </div>
+        </section>
+        <section id="cards">
+            <div class="card">
+
+                <div class="texto-card">
+                    <a class="bt-bg-azul" href=""><i class="fa-solid fa-paperclip fa-3x"></i></a>
+                    <h1>Edital #1</h1>
+                </div>
+                <p>O Projeto Abraço Solidário abre edital para a doação de roupas, com o intuito de formar kits de
+                    vestuário a serem distribuídos a famílias em situação de risco. Esta iniciativa busca amenizar os
+                    impactos da vulnerabilidade social, garantindo que mais pessoas tenham acesso a roupas adequadas e
+                    em bom estado.
+                </p>
+
+                <a class="bt-bg-verde" download href="../files/Edital1.pdf"><i
+                        class="fa-solid fa-download"></i> Fazer Download</a>
+            </div>
+            <div class="card">
+
+                <div class="texto-card">
+                    <a class="bt-bg-azul" href=""><i class="fa-solid fa-paperclip fa-3x"></i></a>
+                    <h1>Edital #2</h1>
+                </div>
+                <p>O Projeto Braço Amigo abre edital para a doação de itens de higiene pessoal, com o intuito de formar
+                    kits de higiene a serem distribuídos a famílias em situação de risco. Esta iniciativa busca amenizar
+                    os impactos da falta de acesso a produtos de higiene, garantindo que mais pessoas possam manter sua
+                    saúde e bem-estar em dia.
+                </p>
+
+                <a class="bt-bg-verde" download href="../files/Edital2.pdf"><i
+                        class="fa-solid fa-download"></i> Fazer Download</a>
+            </div>
+            <div class="card">
+
+                <div class="texto-card">
+                    <a class="bt-bg-azul" href=""><i class="fa-solid fa-paperclip fa-3x"></i></a>
+                    <h1>Edital #3</h1>
+                </div>
+                <p>O Projeto Mãos que Cuidam abre edital para a doação de alimentos, com o intuito de formar cestas
+                    básicas a serem distribuídas para famílias em situação de risco. Esta iniciativa busca amenizar os
+                    impactos da insegurança alimentar, garantindo que cada vez mais pessoas tenham acesso a refeições nutritivas
+                    e equilibradas.
+                </p>
+
+                <a class="bt-bg-verde" download href="../files/Edital3.pdf"><i
+                        class="fa-solid fa-download"></i> Fazer Download</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <img src="../src/logo-fortificar.png" alt="Logo Fortificar">
+        </div>
+        <div>
+            <a class="bt-bg-azul" target="_blank" href="https://www.instagram.com/fortesengenharialtda/"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a class="bt-bg-azul" style="padding: 0.7em 0.6em !important" target="_blank"
+                href="https://www.linkedin.com/company/fortes-engenharia-ltda/"><i
+                    class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a class="bt-bg-azul" target="_blank" href="https://fortes.ind.br/fale-conosco/"><i
+                    class="fa-solid fa-inbox fa-xl"></i></a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</html>
+

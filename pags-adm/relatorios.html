@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../src/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../src/logo-fortificar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-adm.css">
+    <title>Fortificar - Administrador</title>
+</head>
+
+<body>
+    <script>
+        // codigo para não deixar usuários não autorizados entrarem
+        window.onload = function () {
+            var auth = sessionStorage.getItem('auth');
+            if (!auth || auth !== "adm") {
+                sessionStorage.setItem('tipoUsuario', "adm");
+                window.location.href = '../login.html';
+            }
+        }
+    </script>
+    <header>
+        <nav>
+            <a class="bt-normal" href="index.html">Cadastros</a>
+            <a class="bt-normal ativado" href="#">Relatórios</a>
+            <a class="bt-normal" href="chat.html">Chats</a>
+        </nav>
+        <div>
+            <div id="bt-user">
+                <button><i class="fa-solid fa-user fa-3x"></i></button>
+                <div class="submenu">
+                    <h3>Administrador</h3>
+                    <a class="bt-bg-azul" onclick="sair()" href="../index.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main id="aside-screen">
+        <aside>
+            <input class="bt-bg-azul" type="text" name="nome" id="txtNome" placeholder="Filtro">
+            <ul>
+
+                <p style="font-size: 20px;">Tipo de Doação:</p>
+                <li><i class="fa-regular fa-square fa-xl"></i>
+                    <p>Alimentos</p>
+                </li>
+                <li><i class="fa-regular fa-square fa-xl"></i>
+                    <p>Roupas</p>
+                </li>
+                <li><i class="fa-regular fa-square-check fa-xl"></i>
+                    <p>Higiene Pessoal</p>
+                </li>
+                <li><i class="fa-regular fa-square-check fa-xl"></i>
+                    <p>Material Educativo</p>
+                </li>
+                <li></li>
+                <select>
+                    <option>Por semana</option>
+                    <option>Por mês</option>
+                    <option>Por ano</option>
+                </select>
+                <li></li>
+                <p style="font-size: 20px;">Tipo de rendimento:</p>
+                <li><i class="fa-regular fa-square fa-xl"></i>
+                    <p>Dinheiro bruto</p>
+                </li>
+                <li><i class="fa-regular fa-square fa-xl"></i>
+                    <p>Dinheiro liquido</p>
+                </li>
+                <li><i class="fa-regular fa-square-check fa-xl"></i>
+                    <p>Pessoas atendidas</p>
+                </li>
+                <li><i class="fa-regular fa-square fa-xl"></i>
+                    <p>Famílias atendidas</p>
+                </li>
+
+            </ul>
+        </aside>
+        <section class="conteudo">
+            <div>
+                <h1>Relatório</h1>
+                <h3>03/12/2023</h3>
+            </div>
+            <table>
+                <tr>
+                    <th>Doações</th>
+                    <td>Roupas, Higiene pessoal</td>
+                </tr>
+                <tr>
+                    <th>Total R$</th>
+                    <td>59.000</td>
+                </tr>
+                <tr>
+                    <th>Colaboradores</th>
+                    <td>Accaci</td>
+                </tr>
+                <tr>
+                    <th>Região</th>
+                    <td>Itaparica, Jokey Santos Drumound</td>
+                </tr>
+                <tr>
+                    <th>Famílias</th>
+                    <td>14.00</td>
+                </tr>
+            </table>
+            <div class="bts">
+                <button class="bt-bg-verde"><i class="fa-solid fa-print"></i>Imprimir</button>
+                <button class="bt-bg-verde"><i class="fa-solid fa-share"></i>Compartilhar</button>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div>
+            <img src="../src/logo-fortificar.png" alt="Logo Fortificar">
+        </div>
+        <div>
+            <a class="bt-bg-azul" target="_blank" href="https://www.instagram.com/fortesengenharialtda/"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a class="bt-bg-azul" style="padding: 0.7em 0.6em !important" target="_blank"
+                href="https://www.linkedin.com/company/fortes-engenharia-ltda/"><i
+                    class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a class="bt-bg-azul" target="_blank" href="https://fortes.ind.br/fale-conosco/"><i
+                    class="fa-solid fa-inbox fa-xl"></i></a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</html>

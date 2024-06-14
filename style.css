@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* João Gabriel Bolzan Louzada*/
+/* SEÇÕES FIXAS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+a,
+p {
+    font-size: 18px;
+}
+
+i {
+    color: #eaeaea;
+}
+
+.row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1em;
+}
+
+.column {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1em;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 1em 2em;
+
+    img {
+        max-width: 13em;
+        height: auto;
+
+    }
+
+    :last-child {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .submenu {
+        display: flex;
+        pointer-events: none;
+        flex-direction: column;
+        position: absolute;
+        top: 4.5em;
+        right: 4.5em;
+        background-color: #eaeaea;
+        border: 3px solid #10448F;
+        padding: 5em 0;
+        width: 15em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0%;
+        transition: 0.3s;
+        border-radius: 4em 0 4em 4em;
+
+        h3 {
+            color: #10448F;
+        }
+
+        a {
+            padding: 0.5em 2em;
+        }
+    }
+
+    button {
+        background-color: #10448F;
+        padding: 1em 1.4em;
+        border-radius: 100%;
+        border: none;
+    }
+
+    #bt-user:hover .submenu,
+    #bt-user:active .submenu {
+        opacity: 100%;
+        pointer-events: all;
+
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 1em 2em;
+
+    img {
+        max-width: 9em;
+        height: auto;
+    }
+
+    a {
+        font-size: 21px;
+        padding: 0.7em 0.5em !important;
+        border-radius: 100% !important;
+        border: 3px solid #10448F !important;
+    }
+
+    a:hover {
+        border: 3px solid #10448F !important;
+    }
+
+    a:hover>i {
+        color: #10448F;
+    }
+
+
+
+}
+
+/* buttons e links*/
+
+.bt-normal {
+    text-decoration: none;
+    color: #10448F;
+    transition: 0.4s;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.bt-normal:hover {
+    border-bottom: 2px solid #10448F;
+}
+
+.bt-bg-azul {
+    text-decoration: none;
+    background-color: #10448F;
+    color: #eaeaea;
+    padding: 0.7em 2em;
+    border-radius: 0.4em;
+    transition: 0.4s;
+    border: 2px solid #eaeaea;
+}
+
+.bt-bg-azul:hover {
+    background-color: #eaeaea00;
+    color: #10448F;
+    border: 2px solid #10448F;
+}
+
+.bt-bg-verde {
+    text-decoration: none;
+    background-color: #01CA94;
+    color: #0a0a0a;
+    padding: 0.7em 2em;
+    border-radius: 0.5em;
+    transition: 0.4s;
+    border: 2px solid #01CA94;
+}
+
+.bt-bg-verde:hover {
+    background-color: #eaeaea00;
+    color: #01CA94;
+    border: 2px solid #01CA94;
+}
+
+.input-bg-azul {
+    background-color: #10448F;
+    padding: 1em 17em 1em 1em;
+    border: none;
+    border-radius: 5px;
+    caret-color: #eaeaea;
+    outline: none;
+    color: #eaeaea;
+    font-size: 16px;
+}
+
+.input-bg-azul::placeholder {
+    color: #eaeaea5a;
+    font-size: 16px;
+}
+
+
+
+/* SEÇÕES ESPECÍFICAS */
+
+
+/* hero */
+
+#hero {
+    background-image: url(src/banner.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+
+    h1 {
+        color: #eaeaea;
+    }
+
+    h2 {
+        color: #A4A4A4;
+    }
+
+    a {
+        font-size: 20px;
+    }
+}
+
+#login {
+    height: 90vh;
+    background-color: #10448F;
+    display: flex;
+
+    #form-aside {
+        width: 40%;
+        height: 100%;
+        background-image: url(src/aside-login.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    section {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+
+        p {
+            color: #A4A4A4;
+            font-size: 22px;
+        }
+
+        form {
+            background-color: #01CA94;
+            padding: 3em 4em;
+            border-radius: 2%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                width: 12em;
+                align-self: center;
+            }
+
+            div {
+                margin-top: 1em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1px;
+
+                a {
+                    border: none;
+                }
+
+                button {
+                    border: 2px solid #10448F;
+                    font-size: 16px;
+                    padding: 0.8em 4em;
+                }
+            }
+        }
+    }
+
+}
+
+
+#cards {
+    display: flex;
+    align-items: center;   
+    background-color: #01CA94;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2em 4em;
+    
+
+    .card {
+        background-color: #10448F;
+        padding: 3em 2em;
+        height: 75%;
+        margin: 0 1.2em;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        width: 33%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+        .bt-bg-azul {
+            border: 5px solid #01CA94;;
+            border-radius: 100%;
+            padding: 1em 1.5em;
+
+            i{
+                color: #01CA94;
+            }
+
+        }
+
+        p {
+            font-size: 22px;
+            color: #eaeaea;
+            text-align: center;
+        }
+        .texto-card {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.6em;
+
+
+            h1 {
+                font-size: 45px;
+                color: #01CA94;
+            }
+
+           
+        }
+
+        .bt-bg-verde{
+            color: #eaeaea;
+            font-size: 20px;
+        }
+    }
+}

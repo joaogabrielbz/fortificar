@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../src/fontawesome/css/all.css">
+    <link rel="shortcut icon" href="../src/logo-fortificar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-adm.css">
+    <title>Fortificar - Administrador</title>
+</head>
+
+<body>
+    <script>
+        // codigo para não deixar usuários não autorizados entrarem
+        window.onload = function () {
+            var auth = sessionStorage.getItem('auth');
+            if (!auth || auth !== "adm") {
+                sessionStorage.setItem('tipoUsuario', "adm");
+                window.location.href = '../login.html';
+            }
+        }
+    </script>
+    <header>
+        <nav>
+            <a class="bt-normal" href="index.html">Cadastros</a>
+            <a class="bt-normal" href="relatorios.html">Relatórios</a>
+            <a class="bt-normal ativado" href="#">Chats</a>
+        </nav>
+        <div>
+            <div id="bt-user">
+                <button><i class="fa-solid fa-user fa-3x"></i></button>
+                <div class="submenu">
+                    <h3>Administrador</h3>
+                    <a class="bt-bg-azul" onclick="sair()" href="../index.html">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main style="height: 85vh;" id="aside-screen">
+        <aside>
+            <input class="bt-bg-azul" type="text" name="nome" id="txtNome" placeholder="Conversa">
+            <ul id="list-chats">
+                <li>
+                    <p>Instituição #1</p>
+                </li>
+                <li>
+                    <p>Instituição #2</p>
+                </li>
+                <li>
+                    <p>Instituição #3</p>
+                </li>
+                <li>
+                    <p>Instituição #4</p>
+                </li>
+                <li>
+                    <p>Instituição #5</p>
+                </li>
+                <li>
+                    <p>Instituição #6</p>
+                </li>
+                <li>
+                    <p>Instituição #7</p>
+                </li>
+            </ul>
+        </aside>
+        <section class="conversa">
+            <div id="cabecalho-chat">
+                <div>
+                    <button><i class="fa-solid fa-user fa-3x"></i></button>
+                </div>
+                <div  class="column"> 
+                    <h2>Instituição #1</h2>
+                    <p>Online</p>
+                </div>
+            </div>
+
+            <div id="conversa-chat">
+                <div id="data">
+                    <p>HOJE</p>
+                </div>
+                <div id="msg1">
+                    <p>Olá, preciso de ajuda</p>
+                </div>
+                <div id="msg2">
+                    <p>Olá, como posso ajudar?</p>
+                </div>
+            </div>
+
+            <div id="input-chat">
+                <input type="text" class="input-bg-azul" placeholder="Digite sua mensagem">
+                <i class="fa-solid fa-paper-plane fa-2x"></i>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div>
+            <img src="../src/logo-fortificar.png" alt="Logo Fortificar">
+        </div>
+        <div>
+            <a class="bt-bg-azul" target="_blank" href="https://www.instagram.com/fortesengenharialtda/"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a class="bt-bg-azul" style="padding: 0.7em 0.6em !important" target="_blank"
+                href="https://www.linkedin.com/company/fortes-engenharia-ltda/"><i
+                    class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a class="bt-bg-azul" target="_blank" href="https://fortes.ind.br/fale-conosco/"><i
+                    class="fa-solid fa-inbox fa-xl"></i></a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</html>
